@@ -14,9 +14,17 @@ advantage of persisting after restarting the node:
 node.name: prod-data-2
 --------------------------------------------------
 
-The `node.name` can also be set to the server's HOSTNAME as follows:
+The `node.name` can also be set to an environment variable, for example the
+server's HOSTNAME variable on *nix:
 
 [source,yaml]
 --------------------------------------------------
 node.name: ${HOSTNAME}
+--------------------------------------------------
+
+Or the COMPUTERNAME variable on Windows:
+
+[source,yaml]
+--------------------------------------------------
+node.name: ${COMPUTERNAME}
 --------------------------------------------------
